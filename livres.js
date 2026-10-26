@@ -10,12 +10,12 @@ const SABAKE = {
   nom: "Éditions Sabaké",
   signature: "Littératures africaines",
 
-  // ⚠️ À REMPLACER par vos vraies coordonnées
-  email: "contact@editionsabake.com",
-  telephone: "",          // ex. "+223 00 00 00 00" (laisser "" pour ne pas l'afficher)
+  // Coordonnées officielles
+  email: "sabake.ed.livre@gmail.com",
+  telephone: "+223 70 73 99 99",   // laisser "" pour ne pas l'afficher
   whatsapp: "",           // numéro international sans + ni espaces, ex. "22300000000"
   adresse: "",            // ex. "Bamako, Mali"
-  facebook: "",           // lien complet de votre page, ou ""
+  facebook: "https://web.facebook.com/profile.php?id=61595759910136",
   instagram: "",          // lien complet de votre compte, ou ""
 
   // Adresse du site (utile pour le référencement)
@@ -43,19 +43,20 @@ const CATEGORIES = ["Roman", "Poésie", "Essai", "Jeunesse", "Culture"];
    ---------------------------------------------------------- */
 
 const LIVRES = [
-  // EXEMPLE : enlevez les « // » au début de chaque ligne, puis modifiez.
-  //
-  // {
-  //   titre: "Titre du livre",
-  //   auteur: "Prénom Nom",
-  //   categorie: "Roman",
-  //   resume: "Résumé de 40 à 70 mots qui donne envie de lire sans dévoiler toute l'intrigue.",
-  //   couverture: "images/titre-du-livre.jpg",
-  //   couleur: "brun",
-  //   annee: "2026",
-  //   pages: "180",
-  //   isbn: "",
-  //   prix: "",
-  //   disponible: true
-  // },
+  {
+    titre: "Les Chants sahéliens des Damnés",
+    auteur: "Dr Sigame Boubacar Maïga",
+    categorie: "Essai",
+    resume: "Une adaptation de La Divine Comédie de Dante Alighieri, transposée dans les réalités contemporaines du Sahel. Entre mémoire, éthique et force du libre arbitre, l'ouvrage explore les tourments, les espoirs et les crises d'un continent en pleine mutation, dans une méditation universelle sur la condition humaine et la quête de justice.",
+    couverture: "images/les-chants-saheliens-des-damnes.jpg",
+    couleur: "brun",
+    annee: "",
+    pages: "",
+    isbn: "978-99952-942-8-1",
+    prix: "10 euros",
+    disponible: true
+  },
+
+  // Pour ajouter un autre livre : copiez le bloc ci-dessus, collez-le ici
+  // (sans oublier la virgule), puis modifiez les informations.
 ];

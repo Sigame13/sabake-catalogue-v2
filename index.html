@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogue | Éditions Sabaké – Littératures africaines</title>
+<meta name="description" content="Éditions Sabaké, maison d'édition de littératures africaines : romans, poésie, essais, jeunesse et culture. Découvrez le catalogue et demandez un livre.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Éditions Sabaké – Catalogue">
+<meta property="og:description" content="Des voix, des imaginaires et des savoirs pour lire l'Afrique dans toute sa richesse.">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#4b2e20">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%234b2e20'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23bd9345'%3ES%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --brown: #4b2e20;
+    --brown-dark: #2f1c14;
+    --gold: #bd9345;
+    --cream: #fbf6ec;
+    --paper: #fffdf8;
+    --muted: #6b5f55;
+    --line: #e8dcc8;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+  body { margin: 0; color: var(--brown-dark); background: var(--cream); font-family: Georgia, "Times New Roman", serif; line-height: 1.55; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .skip { position: absolute; left: -999px; top: 0; background: var(--brown); color: #fff; padding: 10px 14px; z-index: 20; }
+  .skip:focus { left: 8px; top: 8px; }
+  .topline { height: 5px; background: linear-gradient(90deg,var(--brown),var(--gold),var(--brown)); }
+
+  nav { position: sticky; top: 0; z-index: 10; background: rgba(251,246,236,.96); border-bottom: 1px solid var(--line); }
+  .nav-in { max-width: 1180px; margin: auto; padding: 12px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 20px; }
+  .brand { font-weight: 700; color: var(--brown); text-decoration: none; font-size: 19px; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 4px 20px; font: 14px Arial,sans-serif; }
+  .nav-links a { text-decoration: none; color: var(--muted); padding: 4px 0; }
+  .nav-links a:hover { color: var(--brown); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 5px; }
+
+  .sabake { max-width: 1180px; margin: auto; padding: 0 20px 40px; }
+  header.hero { text-align: center; padding: 44px 10px 28px; }
+  .eyebrow { color: #7d5c1f; font: 700 13px Arial,sans-serif; letter-spacing: .08em; }
+  h1 { color: var(--brown); font-size: clamp(30px, 5vw, 48px); line-height: 1.12; margin: 10px 0; }
+  .intro { max-width: 690px; margin: 0 auto; color: var(--muted); font-size: 17px; }
+  .ornament { color: var(--gold); letter-spacing: .4em; margin: 14px 0; }
+
+  .toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 18px 0 8px; }
+  .toolbar input, .toolbar select { border: 1px solid #cdb994; border-radius: 8px; padding: 12px 14px; background: var(--paper); color: var(--brown-dark); font: 15px Arial,sans-serif; }
+  .toolbar input { flex: 1 1 250px; min-width: 0; }
+  .toolbar select { flex: 0 1 220px; }
+  .count { color: var(--muted); font: 14px Arial,sans-serif; margin: 0 0 18px; min-height: 1.4em; }
+
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; }
+  .book { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); box-shadow: 0 5px 18px rgba(63,39,24,.07); display: flex; flex-direction: column; }
+  .book[hidden] { display: none; }
+  .cover { min-height: 260px; display: flex; align-items: center; justify-content: center; padding: 22px; text-align: center; color: #fff7e8; background: linear-gradient(145deg,#68422c,#3c2419); position: relative; }
+  .cover:after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(224,190,119,.65); pointer-events: none; }
+  .cover.or { background: linear-gradient(145deg,#b08a43,#684b23); }
+  .cover.olive { background: linear-gradient(145deg,#5d6041,#30351f); }
+  .cover.bleu { background: linear-gradient(145deg,#49606a,#23343c); }
+  .cover.image { padding: 0; background: #efe5d2; }
+  .cover.image:after { display: none; }
+  .cover.image img { width: 100%; height: auto; display: block; }
+  .cover-inner { position: relative; z-index: 1; max-width: 230px; }
+  .cover small { display: block; font: 12px Arial,sans-serif; letter-spacing: .06em; margin-bottom: 16px; }
+  .cover strong { display: block; font-size: 25px; line-height: 1.12; }
+  .cover em { display: block; font-size: 14px; margin-top: 18px; }
+  .book-content { padding: 19px 19px 20px; display: flex; flex-direction: column; flex: 1; }
+  .category { color: #7d5c1f; font: 700 12px Arial,sans-serif; letter-spacing: .04em; }
+  h2 { font-size: 21px; line-height: 1.25; margin: 8px 0 5px; color: var(--brown); }
+  .author { color: var(--muted); font: 14px Arial,sans-serif; margin: 0 0 12px; }
+  .summary { font-size: 15px; color: #51443a; margin: 0 0 14px; }
+  .meta { font: 13px Arial,sans-serif; color: var(--muted); margin: 0 0 16px; }
+  .meta b { color: var(--brown); font-weight: 700; }
+  .actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 9px; align-items: center; }
+  .btn { display: inline-block; border-radius: 6px; padding: 11px 14px; text-decoration: none; font: 700 13px Arial,sans-serif; cursor: pointer; }
+  .btn-primary { background: var(--brown); color: #fff; border: 1px solid var(--brown); }
+  .btn-primary:hover { background: var(--brown-dark); }
+  .btn-outline { border: 1px solid var(--gold); color: var(--brown); background: transparent; }
+  .btn-outline:hover { background: #f3ead9; }
+  .badge-off { font: 700 12px Arial,sans-serif; color: #8a3b2a; }
+
+  .empty { grid-column: 1 / -1; text-align: center; padding: 48px 20px; border: 1px dashed #cdb994; border-radius: 12px; background: var(--paper); }
+  .empty h2 { margin-top: 0; }
+  .empty p { margin: 0 auto 16px; max-width: 520px; color: var(--muted); }
+
+  section.block { margin-top: 56px; padding-top: 8px; }
+  section.block h2.title { font-size: clamp(24px, 3.4vw, 32px); margin: 0 0 14px; }
+  .two-col { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: start; }
+  .panel { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 8px; padding: 20px 22px; }
+  .panel h3 { margin: 0 0 8px; font-size: 18px; color: var(--brown); }
+  .panel ul { margin: 8px 0 0; padding-left: 20px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+  .tags button { font: 14px Arial,sans-serif; border: 1px solid var(--gold); background: transparent; color: var(--brown); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+  .tags button:hover { background: #f3ead9; }
+  .contact-list { list-style: none; margin: 0; padding: 0; font: 15px Arial,sans-serif; }
+  .contact-list li { padding: 7px 0; border-bottom: 1px solid var(--line); }
+  .contact-list li:last-child { border-bottom: 0; }
+  .contact-list span { color: var(--muted); display: inline-block; min-width: 110px; }
+
+  footer { text-align: center; color: var(--muted); border-top: 1px solid var(--line); margin-top: 56px; padding-top: 20px; font: 13px Arial,sans-serif; }
+  footer a { text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 850px) { .grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .two-col { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .sabake { padding: 0 12px 28px; } .grid { grid-template-columns: 1fr; } .cover { min-height: 215px; } .toolbar select { flex: 1 1 100%; } .nav-in { padding: 10px 12px; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#catalogue">Aller au catalogue</a>
+<div class="topline"></div>
+
+<nav aria-label="Navigation principale">
+  <div class="nav-in">
+    <a class="brand" href="#top" data-sabake="nom">Éditions Sabaké</a>
+    <div class="nav-links">
+      <a href="#catalogue">Catalogue</a>
+      <a href="#apropos">À propos</a>
+      <a href="#manuscrits">Manuscrits</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="sabake" id="top">
+  <header class="hero">
+    <div class="eyebrow" data-sabake="signature-ligne">Maison d'édition · Littératures africaines</div>
+    <h1>Le catalogue des Éditions Sabaké</h1>
+    <div class="ornament" aria-hidden="true">✦ ─ ✦ ─ ✦</div>
+    <p class="intro">Des voix, des imaginaires et des savoirs pour lire l'Afrique dans toute sa richesse. Découvrez nos ouvrages et contactez-nous pour toute demande d'information ou de commande.</p>
+  </header>
+
+  <div class="toolbar" role="search" aria-label="Filtres du catalogue">
+    <input id="search" type="search" placeholder="Rechercher un titre, un auteur…" aria-label="Rechercher un livre">
+    <select id="category" aria-label="Filtrer par catégorie">
+      <option value="">Toutes les catégories</option>
+    </select>
+  </div>
+  <p class="count" id="count" aria-live="polite"></p>
+
+  <main class="grid" id="catalogue">
+    <noscript><div class="empty"><h2>JavaScript requis</h2><p>Activez JavaScript pour afficher le catalogue, ou écrivez-nous directement par e-mail.</p></div></noscript>
+  </main>
+
+  <section class="block" id="apropos">
+    <h2 class="title">À propos</h2>
+    <div class="two-col">
+      <div>
+        <p>Les Éditions Sabaké publient des voix, des imaginaires et des savoirs pour lire l'Afrique dans toute sa richesse.</p>
+        <p>Notre catalogue réunit des romans, de la poésie, des essais, des livres pour la jeunesse et des ouvrages consacrés à la culture. Filtrez le catalogue par catégorie :</p>
+        <ul class="tags" id="tags" aria-label="Catégories"></ul>
+      </div>
+      <div class="panel">
+        <h3>Commander un livre</h3>
+        <p>Cliquez sur « Demander ce livre » sur la fiche de l'ouvrage : un message pré-rempli s'ouvre dans votre messagerie. Indiquez votre nom, votre ville et le nombre d'exemplaires souhaités ; nous vous répondons avec les modalités de paiement et de livraison.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="manuscrits">
+    <h2 class="title">Soumettre un manuscrit</h2>
+    <div class="panel">
+      <p>Vous écrivez et souhaitez être publié(e) ? Envoyez-nous votre proposition par e-mail avec :</p>
+      <ul>
+        <li>une courte présentation de votre projet (genre, thème, public visé) ;</li>
+        <li>un extrait ou les premiers chapitres ;</li>
+        <li>une courte biographie et vos coordonnées.</li>
+      </ul>
+      <p style="margin-bottom:0"><a class="btn btn-primary" id="btn-manuscrit" href="#contact">Envoyer un manuscrit</a></p>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <h2 class="title">Contact</h2>
+    <div class="panel">
+      <ul class="contact-list" id="contact-list"></ul>
+    </div>
+  </section>
+
+  <footer>
+    <strong data-sabake="nom">Éditions Sabaké</strong> · Littératures africaines<br>
+    <span id="year"></span> · Tous droits réservés
+  </footer>
+</div>
+
+<script src="livres.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Outils ---------- */
+  var norm = function (s) {
+    return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  };
+  var el = function (tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  };
+  var COULEURS = { brun: '', or: 'or', olive: 'olive', bleu: 'bleu' };
+  var AUTO_COULEURS = ['', 'or', 'olive', 'bleu'];
+
+  var S = (typeof SABAKE !== 'undefined') ? SABAKE : { nom: 'Éditions Sabaké', email: '' };
+  var CATS = (typeof CATEGORIES !== 'undefined') ? CATEGORIES : ['Roman', 'Poésie', 'Essai', 'Jeunesse', 'Culture'];
+  var DATA = (typeof LIVRES !== 'undefined') ? LIVRES : [];
+
+  /* ---------- En-têtes et pied de page ---------- */
+  document.querySelectorAll('[data-sabake="nom"]').forEach(function (n) { n.textContent = S.nom; });
+  document.querySelectorAll('[data-sabake="signature-ligne"]').forEach(function (n) {
+    n.textContent = "Maison d'édition · " + (S.signature || 'Littératures africaines');
+  });
+  document.getElementById('year').textContent = '© ' + new Date().getFullYear() + ' ' + S.nom;
+
+  /* ---------- Liens de contact ---------- */
+  function mailto(sujet, corps) {
+    return 'mailto:' + S.email + '?subject=' + encodeURIComponent(sujet) +
+           (corps ? '&body=' + encodeURIComponent(corps) : '');
+  }
+
+  var list = document.getElementById('contact-list');
+  function addContact(label, node) {
+    var li = el('li');
+    li.appendChild(el('span', null, label));
+    li.appendChild(node);
+    list.appendChild(li);
+  }
+  function link(href, text, external) {
+    var a = el('a', null, text);
+    a.href = href;
+    if (external) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+    return a;
+  }
+  if (S.email) addContact('E-mail', link('mailto:' + S.email, S.email));
+  if (S.telephone) addContact('Téléphone', link('tel:' + S.telephone.replace(/[^\d+]/g, ''), S.telephone));
+  if (S.whatsapp) addContact('WhatsApp', link('https://wa.me/' + S.whatsapp.replace(/\D/g, ''), 'Écrire sur WhatsApp', true));
+  if (S.adresse) addContact('Adresse', el('b', null, S.adresse));
+  if (S.facebook) addContact('Facebook', link(S.facebook, 'Notre page Facebook', true));
+  if (S.instagram) addContact('Instagram', link(S.instagram, 'Notre compte Instagram', true));
+  if (!list.children.length) addContact('Contact', el('b', null, 'Coordonnées à renseigner dans livres.js'));
+
+  var btnMs = document.getElementById('btn-manuscrit');
+  if (S.email) {
+    btnMs.href = mailto('Proposition de manuscrit',
+      'Bonjour,\n\nJe souhaite vous soumettre un manuscrit.\n\nTitre :\nGenre :\nRésumé en quelques lignes :\n\nMes coordonnées :\n');
+  }
+
+  /* ---------- Filtres ---------- */
+  var search = document.getElementById('search');
+  var category = document.getElementById('category');
+  var tags = document.getElementById('tags');
+  CATS.forEach(function (c) {
+    var o = el('option', null, c); o.value = c; category.appendChild(o);
+    var li = el('li'); var b = el('button', null, c); b.type = 'button';
+    b.addEventListener('click', function () {
+      category.value = c; filterBooks();
+      document.getElementById('catalogue').scrollIntoView();
+    });
+    li.appendChild(b); tags.appendChild(li);
+  });
+
+  /* ---------- Catalogue ---------- */
+  var grid = document.getElementById('catalogue');
+  var count = document.getElementById('count');
+  var cards = [];
+
+  function buildCover(livre, i) {
+    var cover = el('div', 'cover');
+    function typographic() {
+      cover.className = 'cover ' + (COULEURS[livre.couleur] !== undefined ? COULEURS[livre.couleur] : AUTO_COULEURS[i % 4]);
+      cover.textContent = '';
+      var inner = el('div', 'cover-inner');
+      inner.appendChild(el('small', null, S.nom));
+      inner.appendChild(el('strong', null, livre.titre));
+      inner.appendChild(el('em', null, livre.auteur));
+      cover.appendChild(inner);
+    }
+    if (livre.couverture) {
+      cover.className = 'cover image';
+      var img = new Image();
+      img.alt = 'Couverture de « ' + livre.titre + ' », ' + livre.auteur;
+      img.loading = 'lazy';
+      img.onerror = typographic;           // image introuvable → couverture générée
+      img.src = livre.couverture;
+      cover.appendChild(img);
+    } else {
+      typographic();
+    }
+    return cover;
+  }
+
+  function buildCard(livre, i) {
+    var art = el('article', 'book');
+    art.dataset.category = livre.categorie || '';
+    art.dataset.search = norm([livre.titre, livre.auteur, livre.categorie, livre.resume].join(' '));
+    art.appendChild(buildCover(livre, i));
+
+    var body = el('div', 'book-content');
+    body.appendChild(el('div', 'category', livre.categorie));
+    body.appendChild(el('h2', null, livre.titre));
+    body.appendChild(el('p', 'author', 'Par ' + livre.auteur));
+    body.appendChild(el('p', 'summary', livre.resume));
+
+    var infos = [];
+    if (livre.annee) infos.push(['Année', livre.annee]);
+    if (livre.pages) infos.push(['Pages', livre.pages]);
+    if (livre.isbn) infos.push(['ISBN', livre.isbn]);
+    if (livre.prix) infos.push(['Prix', livre.prix]);
+    if (infos.length) {
+      var m = el('p', 'meta');
+      infos.forEach(function (x, k) {
+        if (k) m.appendChild(document.createTextNode(' · '));
+        m.appendChild(el('b', null, x[0] + ' : '));
+        m.appendChild(document.createTextNode(x[1]));
+      });
+      body.appendChild(m);
+    }
+
+    var actions = el('div', 'actions');
+    if (livre.disponible === false) {
+      actions.appendChild(el('span', 'badge-off', 'Momentanément indisponible'));
+    }
+    var ask = el('a', 'btn btn-primary', 'Demander ce livre');
+    ask.href = S.email ? mailto('Demande : ' + livre.titre,
+      'Bonjour,\n\nJe souhaite obtenir le livre « ' + livre.titre + ' » de ' + livre.auteur +
+      '.\n\nNombre d\'exemplaires :\nNom :\nVille :\n\nMerci de me communiquer les modalités de commande.') : '#contact';
+    actions.appendChild(ask);
+    var c = el('a', 'btn btn-outline', 'Contact'); c.href = '#contact';
+    actions.appendChild(c);
+    body.appendChild(actions);
+
+    art.appendChild(body);
+    return art;
+  }
+
+  var valides = DATA.filter(function (l) { return l && l.titre && l.auteur; });
+  valides.forEach(function (livre, i) {
+    var card = buildCard(livre, i);
+    cards.push(card);
+    grid.appendChild(card);
+  });
+
+  var emptyMsg = el('div', 'empty');
+  emptyMsg.hidden = true;
+  grid.appendChild(emptyMsg);
+
+  function setEmpty(titre, texte, withMail) {
+    emptyMsg.textContent = '';
+    emptyMsg.appendChild(el('h2', null, titre));
+    emptyMsg.appendChild(el('p', null, texte));
+    if (withMail && S.email) {
+      var a = el('a', 'btn btn-primary', 'Nous écrire');
+      a.href = mailto('Demande d\'information');
+      emptyMsg.appendChild(a);
+    }
+    emptyMsg.hidden = false;
+  }
+
+  function filterBooks() {
+    if (!cards.length) {
+      count.textContent = '';
+      setEmpty('Le catalogue arrive bientôt', 'Nos ouvrages seront présentés ici très prochainement. Pour toute question, écrivez-nous.', true);
+      return;
+    }
+    var q = norm(search.value.trim());
+    var c = category.value;
+    var visibles = 0;
+    cards.forEach(function (card) {
+      var ok = card.dataset.search.indexOf(q) !== -1 && (!c || card.dataset.category === c);
+      card.hidden = !ok;
+      if (ok) visibles++;
+    });
+    count.textContent = visibles + ' ouvrage' + (visibles > 1 ? 's' : '') + ' affiché' + (visibles > 1 ? 's' : '') +
+                        (cards.length !== visibles ? ' sur ' + cards.length : '');
+    if (visibles === 0) {
+      setEmpty('Aucun résultat', 'Essayez un autre mot-clé ou une autre catégorie.', false);
+    } else {
+      emptyMsg.hidden = true;
+    }
+  }
+
+  search.addEventListener('input', filterBooks);
+  category.addEventListener('change', filterBooks);
+  filterBooks();
+})();
+</script>
+</body>
+</html>
